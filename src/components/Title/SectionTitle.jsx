@@ -4,7 +4,7 @@ import {Block, CallToAction} from 'components/Title/SectionTitle.styled';
 import { Box } from '../Box';
 
 
-export default function Section ({title, children}) {
+export const Section = ({title, children}) => {
     // static propTypes = {
     //     title: PropTypes.string.isRequired,
     //     children: PropTypes.array.isRequired
@@ -30,4 +30,4 @@ export default function Section ({title, children}) {
     };
 // };
 
-// export default Section;
+export default Section;
