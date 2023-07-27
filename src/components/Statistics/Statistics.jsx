@@ -1,20 +1,9 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {StatisticsTitle, FeedbackList, FeedbackItem, FeedbackName, Statistic} from './Statistics.styled';
 import { Box } from '../Box';
 
-const Feedback = ({good, neutral, bad, total, positivePercentage}) => {
-//   static propTypes = {
-//         good: PropTypes.number.isRequired,
-//         neutral: PropTypes.number.isRequired,
-//         bad: PropTypes.number.isRequired,
-//         total: PropTypes.number.isRequired,
-//         positivePercentage: PropTypes.number.isRequired,
-//   };
-
-
-    // render() { 
-//  const {good, neutral, bad, total, positivePercentage} = this.props
+const FeedbackStatistics = ({good, neutral, bad, total, positivePercentage}) => {
 
     return (
         <Box>
@@ -45,6 +34,13 @@ const Feedback = ({good, neutral, bad, total, positivePercentage}) => {
         </Box>
     );
 };
-// };
 
-export default Feedback;
+FeedbackStatistics.propTypes = {
+        good: PropTypes.number.isRequired,
+        neutral: PropTypes.number.isRequired,
+        bad: PropTypes.number.isRequired,
+        total: PropTypes.number.isRequired,
+        positivePercentage: PropTypes.number.isRequired,
+  };
+
+export default FeedbackStatistics;
