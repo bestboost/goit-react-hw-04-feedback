@@ -1,32 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Buttons, ChooseButton} from './FeedbackOptions.styled';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-class FeedbackOptions extends Component {
-  static propTypes = {
-    options: PropTypes.arrayOf(
-      PropTypes.string),
-    onLeaveFeedback: PropTypes.func.isRequired,
-  }
+const FeedbackOptions = ({options, onLeaveFeedback}) => {
+  // static propTypes = {
+  //   options: PropTypes.arrayOf(
+  //     PropTypes.string),
+  //   onLeaveFeedback: PropTypes.func.isRequired,
+  // }
 
-  static defaultProps = [];
+  // static defaultProps = [];
 
-  state = {
-    options: this.props.options,
-    onLeaveFeedback: this.props.onLeaveFeedback,
-  }
+  // state = {
+  //   options: this.props.options,
+  //   onLeaveFeedback: this.props.onLeaveFeedback,
+  // }
 
 
-  render () {
+  // render () {
 
     return (
       <Buttons>
-        {this.props.options.map(option => (
-          <ChooseButton key={option} type="button" onClick={ (e) => this.props.onLeaveFeedback(option)}>{option}</ChooseButton>
+        {options.map(option => (
+          <ChooseButton key={option} 
+              type="button" 
+              onClick={ (e) => onLeaveFeedback(option)}>
+                {option}
+          </ChooseButton>
          ))}
     </Buttons> 
     )
   }
-}
+// }
 
 export default FeedbackOptions;
