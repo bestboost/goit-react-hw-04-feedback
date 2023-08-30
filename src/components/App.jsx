@@ -16,13 +16,13 @@ export default function App() {
   const handleAdd = feedbackKey => {
     switch (feedbackKey) {
       case 'good':
-        return setGood(good + 1);
+        return setGood(prevGood => prevGood + 1);
 
       case 'neutral':
-        return setNeutral(neutral + 1);
+        return setNeutral(prevNeutral => prevNeutral + 1);
 
       case 'bad':
-        return setBad(bad + 1);
+        return setBad(prevBad => prevBad + 1);
 
       default:
         throw new Error(`Unsupported action type`);
